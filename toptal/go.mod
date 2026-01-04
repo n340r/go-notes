@@ -3,6 +3,8 @@ module github.com/n340r/backend-notes/toptal
 go 1.24.0
 
 require (
+	github.com/davecgh/go-spew v1.1.1
+	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/uptrace/bun v1.2.16
 	github.com/uptrace/bun/dialect/pgdialect v1.2.16
 	github.com/uptrace/bun/driver/pgdriver v1.2.16
