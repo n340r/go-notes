@@ -18,7 +18,7 @@ func (b Category) Name() string {
 	return b.name
 }
 
-func newCategory(data NewCategoryData) (Category, error) {
+func NewCategory(data NewCategoryData) (Category, error) {
 	return Category{
 		id:   data.ID,
 		name: data.Name,
