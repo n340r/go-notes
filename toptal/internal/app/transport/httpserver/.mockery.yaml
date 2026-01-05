@@ -1,0 +1,9 @@
+with-expecter: true
+dir: "mocks"
+outpkg: "mocks"
+mockname: "{{.InterfaceNameCamel}}"
+filename: "{{.InterfaceNameSnake}}_mock.go"
+packages:
+  github.com/n340r/backend-notes/toptal/internal/app/transport/httpserver:
+    interfaces:
+      BookService:

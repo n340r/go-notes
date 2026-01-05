@@ -1,6 +1,3 @@
-run:
-	go run .
-
 # hw1:
-# 	go run ./homework/hw1
+# 	go run ./toptal/...
 
