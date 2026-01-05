@@ -12,7 +12,6 @@ import (
 	"github.com/uptrace/bun/extra/bundebug"
 )
 
-// DB is a shortcut structure to a Postgres DB
 type DB struct {
 	*bun.DB
 }
