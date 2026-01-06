@@ -25,5 +25,6 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=bookshop
+      - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - ./internal/pg/data:/var/lib/postgresql/data
+      - ./internal/pg:/var/lib/postgresql

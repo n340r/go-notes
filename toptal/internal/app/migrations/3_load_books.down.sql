@@ -1,0 +1,1 @@
+DELETE FROM books WHERE title = 'The history of Toptal' AND author = 'Taso Du Val';

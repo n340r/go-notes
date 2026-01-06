@@ -1,4 +1,4 @@
-package cmd
+package main
 
 import (
 	"context"
@@ -12,6 +12,8 @@ import (
 	"time"
 
 	"github.com/golang-migrate/migrate/v4"
+	_ "github.com/golang-migrate/migrate/v4/database/postgres"
+	_ "github.com/golang-migrate/migrate/v4/source/file"
 	"github.com/gorilla/mux"
 	"github.com/n340r/backend-notes/toptal/internal/app/config"
 	"github.com/n340r/backend-notes/toptal/internal/app/repository/pgrepo"
@@ -39,7 +41,7 @@ func run() error {
 	}
 
 	if pgDB != nil {
-		log.Println("Running PostgreSQL migrations")
+		log.Println("🧃 Running PostgreSQL migrations")
 		if err := runPgMigrations(cfg.DSN, cfg.MigrationsPath); err != nil {
 			return fmt.Errorf("runPgMigrations failed: %w", err)
 		}

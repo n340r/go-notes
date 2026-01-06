@@ -1,0 +1,2 @@
+INSERT INTO "books" ("id", "title", "year", "author", "price", "stock", "category_id", "created_at", "updated_at")
+VALUES (DEFAULT, 'The history of Toptal', 2010, 'Taso Du Val', 1000, 100, 1, DEFAULT, DEFAULT);

@@ -2,7 +2,7 @@
 
 # Go tools + alpine for builder stage
 # Name it AS builder so that you can use it later in the file
-FROM golang:1.22-alpine AS builder
+FROM golang:1.24-alpine AS builder
 
 # --- BUILDER STAGE ---
 
@@ -53,8 +53,8 @@ USER appuser
 WORKDIR /app
 
 # Copy only the necessary files from the builder stage
-COPY --from=builder /app/app .
-COPY --from=builder /app/cmd/wait-for-it.sh .
+COPY --from=builder --chown=appuser:appuser --chmod=0755 /app/app .
+COPY --from=builder --chown=appuser:appuser --chmod=0755 /app/cmd/wait-for-it.sh .
 COPY --from=builder /app/internal/app/migrations ./migrations
 
 # Expose the port that the application listens on
