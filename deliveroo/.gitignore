@@ -1,0 +1,27 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary and coverage
+*.test
+*.out
+coverage.*
+
+# Go workspace
+go.work
+go.work.sum
+
+# IDE/editor
+.idea/
+.vscode/
+*.swp
+
+# Build output
+bin/
+dist/
+
+# Local data
+internal/pg/
